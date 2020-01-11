@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require './lib/scraper_project'
+module ScraperProject
+
+cat = Cat.new
+cat.name = "Bubbles"
+puts "I am #{cat.name}, #{cat.object_id}."
+
+end
