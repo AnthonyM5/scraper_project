@@ -1,5 +1,5 @@
 class Coins
-  attr_accessor :name, :price, :volume, :market_cap
+  attr_accessor :name, :price, :volume, :market_cap, :circulating_supply, :change_24
   @@all = []
 
   def initialize(crypto_hash)
