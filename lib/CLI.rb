@@ -8,7 +8,18 @@ INDEX_URL = "https://coinmarketcap.com/"
 
   def call
     make_coins
-    display_coins
+    input = ""
+    while input != 'quit'
+      puts "Welcome to the Cryptocurrency Market"
+      puts "To list Top 100 Currencies, enter 'list coins'"
+      puts "To quit, type 'quit'"
+      input = gets.chomp
+
+      case input
+      when 'list coins'
+        display_coins
+      end
+    end
   end
 
   def make_coins
@@ -17,9 +28,8 @@ INDEX_URL = "https://coinmarketcap.com/"
   end
 
   def display_coins
-    Coins.all.each{|coin|
-      puts "#{coin.name}"
-      puts "Current price is: #{coin.price}"
+    Coins.all.each_with_index{|coin, index|
+      puts "#{index + 1}. #{coin.name}"
     }
   end
 
