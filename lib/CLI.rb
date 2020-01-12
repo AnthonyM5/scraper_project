@@ -44,7 +44,8 @@ INDEX_URL = "https://coinmarketcap.com/"
     if (1..coins.length).include?(input)
       coin = Coins.all[input - 1]
     puts "#{coin.name}'s Current Price is: #{coin.price}, as of #{time + Time.zone_offset('EST')}."
-    puts "#{coin.name}'s Current Market Cap is: #{coin.market_cap}, as of #{time + Time.zone_offset('EST')}."
+    puts "#{coin.name}'s 24 Hour Volume is: #{coin.volume}, as of #{time + Time.zone_offset('EST')}."
+    puts "#{coin.name}'s Current Market Captialization is: #{coin.market_cap}, as of #{time + Time.zone_offset('EST')}."
     end
   end
 

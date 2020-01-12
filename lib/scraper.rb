@@ -11,7 +11,8 @@ class Scraper
       coin_info = {
         name: coins.css(".cmc-link").first.text,
         price: coins.css(".cmc-link")[1].text,
-        market_cap: coins.css(".cmc-link")[2].text
+        volume: coins.css(".cmc-link")[2].text,
+        market_cap: coins.css("div")[2].text
       }
       crypto_array << coin_info
     }
