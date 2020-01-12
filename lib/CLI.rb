@@ -6,7 +6,7 @@ require 'open-uri'
 class CLI
 INDEX_URL = "https://coinmarketcap.com/"
 
-  def run
+  def call
     make_coins
     display_coins
   end

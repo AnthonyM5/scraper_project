@@ -11,7 +11,6 @@ class Coins
     coins_array.each{|crypto_hash|
       self.new(crypto_hash)
       }
-      puts Coins.all
   end
 
   def self.all

@@ -3,4 +3,4 @@ require_relative '../lib/scraper.rb'
 require_relative '../lib/coins.rb'
 require_relative '../lib/CLI.rb'
 
-CLI.new.run
+CLI.new.call
