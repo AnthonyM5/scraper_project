@@ -46,7 +46,11 @@ INDEX_URL = "https://coinmarketcap.com/"
     puts "#{coin.name}'s 24 Hour Volume is: #{coin.volume} USD."
     puts "#{coin.name}'s Current Market Captialization is: #{coin.market_cap} USD."
     puts "#{coin.name}'s Total Circulating Supply is: #{coin.circulating_supply}."
-
+    if coin.circulating_supply.split.include?("*")
+      puts "#{coin.name} is not mineable."
+    else
+      puts "#{coin.name} is mineable."
+    end
     end
   end
 
