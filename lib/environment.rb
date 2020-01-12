@@ -1,0 +1,5 @@
+require_relative '../lib/scraper'
+require_relative '../lib/coins'
+require_relative '../lib/CLI'
+require 'nokogiri'
+require 'open-uri'
