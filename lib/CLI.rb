@@ -39,9 +39,12 @@ INDEX_URL = "https://coinmarketcap.com/"
     puts "Which currency would you like to know more about?"
     coins = Coins.all
     input = gets.chomp.to_i
+    time = Time.now
+
     if (1..coins.length).include?(input)
       coin = Coins.all[input - 1]
-    puts "#{coin.name}'s Current Price is: #{coin.price}"
+    puts "#{coin.name}'s Current Price is: #{coin.price}, as of #{time + Time.zone_offset('EST')}."
+    puts "#{coin.name}'s Current Market Cap is: #{coin.market_cap}, as of #{time + Time.zone_offset('EST')}."
     end
   end
 
