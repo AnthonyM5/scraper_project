@@ -11,14 +11,16 @@ INDEX_URL = "https://coinmarketcap.com/"
     input = ""
     while input != 'quit'
       puts "Welcome to the Cryptocurrency Market"
-      puts "To list Top 100 Currencies, enter 'list coins'"
+      puts "To list Top 100 Currencies, enter 'start'"
       puts "To quit, type 'quit'"
       input = gets.chomp
 
       case input
-      when 'list coins'
+      when 'start'
         display_coins
+        show_coin
       end
+
     end
   end
 
@@ -31,6 +33,16 @@ INDEX_URL = "https://coinmarketcap.com/"
     Coins.all.each_with_index{|coin, index|
       puts "#{index + 1}. #{coin.name}"
     }
+  end
+
+  def show_coin
+    puts "Which currency would you like to know more about?"
+    coins = Coins.all
+    input = gets.chomp.to_i
+    if (1..coins.length).include?(input)
+      coin = Coins.all[input - 1]
+    puts "#{coin.name}'s Current Price is: #{coin.price}"
+    end
   end
 
 end
