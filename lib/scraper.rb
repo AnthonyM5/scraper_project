@@ -9,11 +9,11 @@ class Scraper
     market.css("div.cmc-table__table-wrapper-outer .tr.cmc-table-row").collect{
       |coins|
       coin_info = {
-        name: coins.css("a.cmc-link").text
+        name: coins.css(".cmc-link").first.text,
+        price: coins.css(".cmc-link")[1].text
       }
       crypto << coin_info
     }
-    binding.pry
   end
 
 end

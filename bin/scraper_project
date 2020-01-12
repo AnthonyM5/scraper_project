@@ -1,9 +1,4 @@
 #!/usr/bin/env ruby
-require_relative '../lib/scraper_project'
-module ScraperProject
+require_relative '../lib/scraper.rb'
 
-cat = Cat.new
-cat.name = "Bubbles"
-puts "I am #{cat.name}, #{cat.object_id}."
-
-end
+Scraper.new
