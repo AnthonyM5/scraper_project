@@ -1,8 +1,10 @@
-require_relative '../lib/scraper.rb'
-require_relative '../lib/coins.rb'
+require_relative '../lib/scraper'
+require_relative '../lib/coins'
 require 'nokogiri'
 require 'open-uri'
+
 class CLI
+INDEX_URL = "https://coinmarketcap.com/"
 
   def run
     make_coins
@@ -10,18 +12,15 @@ class CLI
   end
 
   def make_coins
-    crypto_array = Scraper.scrape_index_page
-    Coins.create_from_collection(crypto_array)
-    puts "coins made"
+    coins_array = Scraper.scrape_index_page(INDEX_URL)
+    Coins.create_from_collection(coins_array)
   end
 
   def display_coins
-    Coins.all.each do |coin|
+    Coins.all.each{|coin|
       puts "#{coin.name}"
-      puts "#{coin.price}"
-      puts "#{coin.market_cap}"
-
-    end
+      puts "Current price is: #{coin.price}"
+    }
   end
 
 end
