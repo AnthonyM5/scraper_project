@@ -45,10 +45,11 @@ INDEX_URL = "https://coinmarketcap.com/"
       coin = Coins.all[input - 1]
     puts "As of #{time + Time.zone_offset('EST')}:"
     puts "#{coin.name}'s Current Price is: #{coin.price}."
-    puts "#{coin.name}'s 24 Hour Volume is: #{coin.volume}."
-    puts "#{coin.name}'s Current Market Captialization is: #{coin.market_cap}."
-    puts "#{coin.name}'s Total Circulating Supply is: #{coin.circulating_supply}."
     puts "#{coin.name}'s Change Over 24 Hours is: #{coin.change_24}."
+    puts "#{coin.name}'s 24 Hour Volume is: #{coin.volume}."
+    puts "#{coin.name}'s Current Market Captialization is: #{coin.market_cap} USD."
+    puts "#{coin.name}'s Total Circulating Supply is: #{coin.circulating_supply}."
+
     end
   end
 
