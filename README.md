@@ -1,8 +1,6 @@
 # ScraperProject
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/scraper_project`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the CryptoCurrency Market Scraper!  Quickly view a list of the top 100 cryptocurrencies by market capitalization, and get more details such as: Current Trading Price (average across marketplaces), Current Market Captilzation, Current Total Supply in Circulation, Change over 24 Hours, Total 24 Hour Trade Volume, Change over 24 Hours, and Mineable Status.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use: 
+
+Enter 'start' to display a list of Top 100 cryptocurrencies.
+
+Enter 1-100 to see more details of any individual coin.
+
+Enter 'quit' to exit the program.
 
 ## Development
 
